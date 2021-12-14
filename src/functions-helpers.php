@@ -116,7 +116,7 @@ function cache( $name, $path = '' ) {
 		return $cache->get( $name );
 	}
 
-	$cache->add( $name, new Benlumia007\Alembic\Cache\Cache( $name, $path ) );
+	$cache->add( $name, new Benlumia007\Alembic\Cache\Component( $name, $path ) );
 
 	return $cache->get( $name );
 }

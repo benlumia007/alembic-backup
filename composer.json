@@ -17,7 +17,10 @@
     "autoload": {
         "psr-4": {
           "Benlumia007\\Alembic\\": "src/"
-		}
+		},
+        "files": [
+            "src/functions-helpers.php"
+        ]
     },
     "require": {
         "php": ">=7.4"

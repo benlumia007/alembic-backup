@@ -2,12 +2,12 @@
 /**
  * Collections class.
  *
- * This class is essentially a wrapper around the `Container` class that's
- * specific to the framework. This class is meant to be used as the single,
- * one-true instance of the framework. It's used to load up service providers
- * that interact with the container.
+ * This file houses the `Collection` class, which is a class used  for
+ * storing collections of data. It is built for storing an array of key
+ * pairs. Values can be any type of value. Keys should be named rather
+ * than numeric if you need easy access.
  *
- * @package   Benlumia007\Alembic
+ * @package   Alembic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright 2021. Benjamin Lu
  * @link      https://github.com/benlumia007/benjlu

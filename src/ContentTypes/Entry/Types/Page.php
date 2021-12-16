@@ -1,6 +1,6 @@
 <?php
 
-namespace Benlumia007\Alembic\Entry\Types;
+namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
 
 use Benlumia007\Alembic\Controllers\Page as Controller;
 use Benlumia007\Alembic\Routing\Routes;

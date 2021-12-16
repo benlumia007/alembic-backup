@@ -18,6 +18,8 @@ use Benlumia007\Alembic\Proxies\App;
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
 use Benlumia007\Alembic\ContentTypes\Provider as ContentTypesProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
+use Benlumia007\Alembic\Routing\Routes\Provider as RoutesProvider;
+
 /**
  * Application class.
  *
@@ -130,7 +132,8 @@ class Framework extends Container implements Application, Bootable {
 		}, [
 			CacheProvider::class,
 			ContentTypesProvider::class,
-			HttpProvider::class
+			HttpProvider::class,
+			RoutesProvider::class
 		] );
 	}
 

@@ -19,6 +19,7 @@
           "Benlumia007\\Alembic\\": "src/"
 		},
         "files": [
+            "src/Cache/functions-cache.php",
             "src/functions-helpers.php"
         ]
     },

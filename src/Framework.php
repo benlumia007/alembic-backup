@@ -16,6 +16,7 @@ use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
 
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
+use Benlumia007\Alembic\ContentTypes\Provider as ContentTypesProvider;
 
 /**
  * Application class.
@@ -127,7 +128,8 @@ class Framework extends Container implements Application, Bootable {
 		array_map( function( $provider ) {
 			$this->provider( $provider );
 		}, [
-			CacheProvider::class
+			CacheProvider::class,
+			ContentTypesProvider::class
 		] );
 	}
 

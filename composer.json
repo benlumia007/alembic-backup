@@ -20,9 +20,9 @@
 		},
         "files": [
             "src/Cache/functions-cache.php",
+            "src/Helpers/functions-helpers.php",
             "src/Theme/Menu/functions-menu.php",
-            "src/Theme/Site/functions-site.php",
-            "src/functions-helpers.php"
+            "src/Theme/Site/functions-site.php"
         ]
     },
 	"require": {

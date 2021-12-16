@@ -15,6 +15,8 @@ use Benlumia007\Alembic\Contracts\Bootable;
 use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
 
+use Benlumia007\Alembic\Cache\Provider as CacheProvider;
+
 /**
  * Application class.
  *
@@ -79,6 +81,7 @@ class Framework extends Container implements Application, Bootable {
 	public function __construct() {
 		$this->registerDefaultBindings();
 		$this->registerDefaultProxies();
+		$this->registerDefaultProviders();
 	}
 
 	/**
@@ -118,6 +121,10 @@ class Framework extends Container implements Application, Bootable {
 	 */
 	protected function registerDefaultProxies() {
 		$this->proxy( App::class, 'Benlumia007\Alembic\App' );
+	}
+
+	protected function registerDefaultProviders() {
+		CacheProvider::class;
 	}
 
 	/**

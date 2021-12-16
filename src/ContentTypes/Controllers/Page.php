@@ -1,9 +1,9 @@
 <?php
 
-namespace Benlumia007\Alembic\Controllers;
+namespace Benlumia007\Alembic\ContentTypes\Controllers;
 
-use Benlumia007\Alembic\Entry\Entries;
-use Benlumia007\Alembic\Entry\Locator;
+use Benlumia007\Alembic\ContentTypes\Entry\Entries;
+use Benlumia007\Alembic\ContentTypes\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 
 class Page {

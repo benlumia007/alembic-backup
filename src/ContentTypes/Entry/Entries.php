@@ -1,7 +1,6 @@
 <?php
 
 namespace Benlumia007\Alembic\ContentTypes\Entry;
-
 use Benlumia007\Alembic\App;
 
 class Entries {

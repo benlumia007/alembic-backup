@@ -124,7 +124,11 @@ class Framework extends Container implements Application, Bootable {
 	}
 
 	protected function registerDefaultProviders() {
-		CacheProvider::class;
+		array_map( function( $provider ) {
+			$this->provider( $provider );
+		}, [
+			CacheProvider::class
+		] );
 	}
 
 	/**

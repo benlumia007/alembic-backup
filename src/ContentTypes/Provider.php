@@ -13,7 +13,7 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace Benlumia007\Alembic\ContentTypes\Entry;
+namespace Benlumia007\Alembic\ContentTypes;
 use Benlumia007\Alembic\Tools\ServiceProvider;
 use Benlumia007\Alembic\Proxies\ContentTypes;
 

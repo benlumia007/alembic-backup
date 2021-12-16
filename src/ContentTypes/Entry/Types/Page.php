@@ -2,8 +2,8 @@
 
 namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
 
-use Benlumia007\Alembic\Controllers\Page as Controller;
-use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\ContentTypes\Controllers\Page as Controller;
+use Benlumia007\Alembic\Routing\Routes\Component;
 use Benlumia007\Alembic\App;
 
 class Page extends Type {

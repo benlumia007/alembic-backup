@@ -1,6 +1,6 @@
 <?php
 
-namespace Benlumia007\Alembic\View\View;
+namespace Benlumia007\Alembic\Template\View;
 
 class Component {
 

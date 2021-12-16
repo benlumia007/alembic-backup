@@ -1,7 +1,7 @@
 <?php
 
 namespace Benlumia007\Alembic\Template\Engine;
-use Benlumia007\Alembic\View\View\Component as View;
+use Benlumia007\Alembic\Template\View\Component as View;
 
 class Component {
 

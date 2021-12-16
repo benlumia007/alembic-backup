@@ -19,6 +19,7 @@ function app_title() {
 }
 
 function app_head() { ?>
+    <title><?php e( app_title() ); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?= e( asset( 'assets/css/screen.css' ) ) ?>" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

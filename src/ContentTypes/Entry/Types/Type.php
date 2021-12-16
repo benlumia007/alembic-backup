@@ -15,14 +15,13 @@
  */
 
 namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
-
-use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\Routing\Routes\Component;
 
 abstract class Type {
 
 	protected $router;
 
-	public function __construct( Routes $router ) {
+	public function __construct( Component $router ) {
 
 		$this->router = $router;
 	}

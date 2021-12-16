@@ -12,7 +12,7 @@
 namespace Benlumia007\Alembic\Routing\Routes;
 
 use Benlumia007\Alembic\App;
-use Benlumia007\Alembic\Routing\Http\Request;
+use Benlumia007\Alembic\Routing\Http\Component as Request;
 use Benlumia007\Alembic\Tools\Collection;
 
 class Component {

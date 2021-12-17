@@ -13,13 +13,13 @@
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-namespace Benlumia007\Alembic\Entry\Types;
+namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
 
-use Benlumia007\Alembic\Controllers\Post as PostController;
-use Benlumia007\Alembic\Controllers\PostDayArchive;
-use Benlumia007\Alembic\Controllers\PostMonthArchive;
-use Benlumia007\Alembic\Controllers\PostYearArchive;
-use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\ContentTypes\Controllers\Post as PostController;
+use Benlumia007\Alembic\ContentTypes\Controllers\PostDayArchive;
+use Benlumia007\Alembic\ContentTypes\Controllers\PostMonthArchive;
+use Benlumia007\Alembic\ContentTypes\Controllers\PostYearArchive;
+use Benlumia007\Alembic\Routing\Routes\Component;
 use Benlumia007\Alembic\App;
 
 class Post extends Type {

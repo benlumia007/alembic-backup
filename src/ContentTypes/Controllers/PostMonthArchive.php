@@ -3,8 +3,8 @@
 namespace Benlumia007\Alembic\Controllers;
 
 use Benlumia007\Alembic\App;
-use Benlumia007\Alembic\Entry\Entries;
-use Benlumia007\Alembic\Entry\Locator;
+use Benlumia007\Alembic\ContentTypes\Entry\Entries;
+use Benlumia007\Alembic\ContentTypes\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\ContentTypes;
 

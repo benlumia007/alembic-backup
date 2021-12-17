@@ -1,9 +1,9 @@
 <?php
 
-namespace Benlumia007\Alembic\Entry\Types;
+namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
 
-use Benlumia007\Alembic\Controllers\Author as AuthorController;
-use Benlumia007\Alembic\Routing\Routes;
+use Benlumia007\Alembic\ContentTypes\Controllers\Author as AuthorController;
+use Benlumia007\Alembic\Routing\Routes\Component;
 use Benlumia007\Alembic\App;
 
 class Author extends Type {

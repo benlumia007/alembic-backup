@@ -3,8 +3,8 @@
 /**
  * Define namespace
  */
-namespace Benlumia007\Alembic\Entry\Types;
-use Benlumia007\Alembic\Controllers\Taxonomy as TaxonomyController;
+namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
+use Benlumia007\Alembic\ContentTypes\Controllers\Taxonomy as TaxonomyController;
 use Benlumia007\Alembic\Routing\Routes;
 use Benlumia007\Alembic\App;
 

@@ -26,3 +26,15 @@ function app_head() { ?>
     <script rel="javascript" src="<?= e( asset( 'assets/js/app.js' ) ) ?>"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <?php }
+
+function app_categories() { ?>
+	<div class="categories">
+		<?php $categories = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'category' )->path() ) ); ?>
+		<h2 class="categories-title">Categories</h2>
+		<?php foreach( $categories->all() as $category ) : ?>
+			<ul>
+					<li><a href="<?= $category->uri(); ?>"><?= $category->title(); ?></a></li>
+				</ul>
+		<?php endforeach; ?>
+	</div>
+<?php }

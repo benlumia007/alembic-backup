@@ -31,11 +31,11 @@ function app_categories() { ?>
 	<div class="categories">
 		<?php $categories = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'category' )->path() ) ); ?>
 		<h2 class="categories-title">Categories</h2>
-		<?php foreach( $categories->all() as $category ) : ?>
-			<ul>
-					<li><a href="<?= $category->uri(); ?>"><?= $category->title(); ?></a></li>
-				</ul>
-		<?php endforeach; ?>
+		<ul>
+			<?php foreach( $categories->all() as $category ) : ?>
+				<li><a href="<?= $category->uri(); ?>"><?= $category->title(); ?></a></li>
+			<?php endforeach; ?>
+		</ul>
 	</div>
 <?php }
 

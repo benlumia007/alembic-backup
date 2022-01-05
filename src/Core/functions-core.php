@@ -33,7 +33,7 @@ function app_categories() { ?>
 			$cats = [];
 			$posts = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'post' )->path() ) ); 
 			
-			foreach ( $posts as $post ) {
+			foreach ( $posts->all() as $post ) {
 				$metas = ( array ) $post->meta( 'category' );
 
 				if ( $metas ) {

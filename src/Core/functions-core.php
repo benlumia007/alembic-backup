@@ -52,7 +52,7 @@ function app_categories() { ?>
 				foreach( $categories->all() as $category ) {
 					foreach ( $cats as $cat ) {
 						if ( $cat === strtolower( $category->title() ) ) {
-							echo '<li><a href="' . $term->uri() . '">' . $term->title() . '</a></li>';
+							echo '<li><a href="' . $category->uri() . '">' . $category->title() . '</a></li>';
 						}
 					}
 				}

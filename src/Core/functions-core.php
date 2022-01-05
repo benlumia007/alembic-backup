@@ -29,12 +29,34 @@ function app_head() { ?>
 
 function app_categories() { ?>
 	<div class="categories">
-		<?php $categories = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'category' )->path() ) ); ?>
+		<?php
+			$cat = [];
+			$posts = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'post' )->path() ) ); 
+			
+			foreach ( $posts as $post ) {
+				$metas = ( array ) $post->meta( 'category' );
+
+				if ( $metas ) {
+					$cats = array_merge( $cats, $metas );
+				}
+			}
+
+			$cats = array_unique( $cats );
+
+			$categories = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'category' )->path(), [ 'slug' => $cats ] ) );
+		?>
+
 		<h2 class="categories-title">Categories</h2>
 		<ul>
-			<?php foreach( $categories->all() as $category ) : ?>
-				<li><a href="<?= $category->uri(); ?>"><?= $category->title(); ?></a></li>
-			<?php endforeach; ?>
+			<?php 
+				foreach( $categories->all() as $category ) {
+					foreach ( $cats as $cat ) {
+						if ( $cat === strtolower( $category->title() ) ) {
+							echo '<li><a href="' . $term->uri() . '">' . $term->title() . '</a></li>';
+						}
+					}
+				}
+			?>
 		</ul>
 	</div>
 <?php }

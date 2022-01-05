@@ -1,6 +1,6 @@
 <?php
 
-namespace Benlumia007\Alembic\Controllers;
+namespace Benlumia007\Alembic\ContentTypes\Controllers;
 
 use Benlumia007\Alembic\App;
 use Benlumia007\Alembic\ContentTypes\Entry\Entries;

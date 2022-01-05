@@ -30,7 +30,7 @@ function app_head() { ?>
 function app_categories() { ?>
 	<div class="categories">
 		<?php
-			$cat = [];
+			$cats = [];
 			$posts = new Benlumia007\Alembic\ContentTypes\Entry\Entries( new Benlumia007\Alembic\ContentTypes\Entry\Locator( Benlumia007\Alembic\ContentTypes::get( 'post' )->path() ) ); 
 			
 			foreach ( $posts as $post ) {

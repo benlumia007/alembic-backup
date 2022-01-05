@@ -24,7 +24,7 @@ class Component {
 
 		$this->name = $name;
 
-		$this->path = App::resolve( 'path' ) . "/user/cache";
+		$this->path = App::resolve( 'path' ) . "_cache";
 
 		if ( $path ) {
 			$this->path = "{$this->path}/{$path}";

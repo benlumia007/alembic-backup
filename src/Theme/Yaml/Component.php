@@ -43,7 +43,7 @@ class Component {
 
         if ( empty($this->data) ) {
 
-            $this->data = Yaml::parseFile( 'config/config.yml' );
+            $this->data = Yaml::parseFile( '_data/config.yml' );
 
         }
         return $this->data;

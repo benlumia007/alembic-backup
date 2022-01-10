@@ -30,7 +30,7 @@ class Post {
 		$all = $entries->all();
 		$entry = array_shift( $all );
 
-		Engine::display( 'single', [], [
+		Engine::display( 'single', [ $this->slug ], [
 			'title'   => $entry ? $entry->title() : 'Not Found',
 			'query'   => $entry ? $entry : false,
 			'page'    => 1,

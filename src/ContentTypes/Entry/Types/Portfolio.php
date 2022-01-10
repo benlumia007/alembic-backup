@@ -1,9 +1,9 @@
 <?php
 
-namespace Benlumia007\Alembic\Entry\Types;
+namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
 
-use Benlumia007\Alembic\Controllers\Portfolio as PortfolioController;
-use Benlumia007\Alembic\Controllers\PortfolioArchives;
+use Benlumia007\Alembic\ContentTypes\Controllers\Portfolio as PortfolioController;
+use Benlumia007\Alembic\ContentTypes\Controllers\PortfolioArchives;
 use Benlumia007\Alembic\App;
 
 class Portfolio extends Type {

@@ -28,7 +28,7 @@ class Portfolio {
 		$all = $entries->all();
 		$entry = array_shift( $all );
 
-		Engine::display( 'portfolio', [], [
+		Engine::display( 'portfolio', [ $this->slug ], [
 			'title'   => $entry ? $entry->title() : 'Not Found',
 			'query'   => $entry ? $entry : false,
 			'page'    => 1,

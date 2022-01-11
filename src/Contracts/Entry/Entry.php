@@ -9,7 +9,7 @@ interface Entry {
 
 	public function meta();
 
-	public function metaEntries();
+	public function metaEntries( $name );
 
 	public function title();
 
@@ -21,7 +21,7 @@ interface Entry {
 
 	public function authors();
 
-	public function terms();
+	public function terms( $taxonomy );
 
 	public function content();
 

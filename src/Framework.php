@@ -16,7 +16,7 @@ use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
 
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
-use Benlumia007\Alembic\ContentTypes\Provider as ContentTypesProvider;
+use Benlumia007\Alembic\Entry\Provider as ContentTypesProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
 use Benlumia007\Alembic\Routing\Routes\Provider as RoutesProvider;
 use Benlumia007\Alembic\Template\View\Provider as ViewProvider;

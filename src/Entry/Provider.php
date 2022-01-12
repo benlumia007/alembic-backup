@@ -15,7 +15,7 @@
 
 namespace Benlumia007\Alembic\Entry;
 use Benlumia007\Alembic\Tools\ServiceProvider;
-use Benlumia007\Alembic\Entry\Types;
+use Benlumia007\Alembic\Entry\ContentTypes as Types;
 use Benlumia007\Alembic\Proxies\ContentTypes;
 
 /**

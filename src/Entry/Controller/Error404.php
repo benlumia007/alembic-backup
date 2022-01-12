@@ -1,6 +1,6 @@
 <?php
 
-namespace Benlumia007\Alembic\Contenttypes\Controllers;
+namespace Benlumia007\Alembic\Entry\Controller;
 
 use Benlumia007\Alembic\Entry\Entries;
 use Benlumia007\Alembic\Entry\Locator;

@@ -23,7 +23,7 @@ class Home {
 	protected function entries() {
 
 		// This creates a new _index.md under user/content/_index.md
-		$entries = new Entries( $locator, [ 'slug' => '_index' ] );
+		$entries = new Entries( new Locator(), [ 'slug' => '_index' ] );
 
 		// Return $entries
 		return $entries;

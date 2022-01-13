@@ -9,7 +9,6 @@ use Benlumia007\Alembic\Routing\Entry\Locator;
 class Error404 {
 	public function __invoke() {
 		Engine::display( '404', [], [
-			'page'    => 1,
 			'entries' => $this->entries(),
 		] );
 	}

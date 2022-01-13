@@ -2,7 +2,7 @@
 
 namespace Benlumia007\Alembic\Entry;
 
-use Benlumia007\Alembic\Entry\Type;
+use Benlumia007\Alembic\Routing\Entry\Type;
 use Benlumia007\Alembic\Tools\Collection;
 
 class ContentTypes extends Collection {

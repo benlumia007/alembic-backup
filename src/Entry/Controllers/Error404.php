@@ -11,7 +11,7 @@ class Error404 {
 
 		// Loooks for 404.php under public/views
 		Engine::display( '404', [], [ 
-			'title'   => $entry ? $entry->title() : 'Not Found',
+			'title'   => 'Not Found',
 			'entries' => $this->entries() 
 		] );
 	}

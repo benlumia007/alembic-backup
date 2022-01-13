@@ -1,10 +1,9 @@
 <?php 
 
-namespace Benlumia007\Alembic\Entry;
-use Benlumia007\Alembic\Contracts\Entry\Entries as EntriesContract;
+namespace Benlumia007\Alembic\Routing\Entry;
 use Benlumia007\Alembic\App;
 
-class Entries implements EntriesContract {
+class Entries {
 	protected $locator;
 
 	protected $number = 10;

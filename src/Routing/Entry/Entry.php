@@ -1,7 +1,6 @@
 <?php
 
 namespace Benlumia007\Alembic\Entry;
-use Benlumia007\Alembic\Contracts\Entry\Entry as EntryContract;
 use ParsedownExtra;
 use Benlumia007\Alembic\Tools\Markdown;
 
@@ -12,7 +11,7 @@ use Benlumia007\Alembic\App;
 use Benlumia007\Alembic\ContentTypes;
 use DateTime;
 
-class Entry implements EntryContract {
+class Entry {
 
 	protected $filename;
 	protected $path;

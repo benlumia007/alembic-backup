@@ -1,11 +1,10 @@
 <?php
 
 namespace Benlumia007\Alembic\Entry;
-use Benlumia007\Alembic\Contracts\Entry\Locator as LocatorContract;
 use Benlumia007\Alembic\App;
 use Benlumia007\Alembic\Yaml\FrontMatter;
 
-class Locator implements LocatorContract {
+class Locator {
 
 	protected $path;
 

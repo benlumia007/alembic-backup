@@ -9,17 +9,12 @@
  */
 
 namespace Benlumia007\Alembic\Entry\Controllers;
-
-use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\Routing\Entry\Entries;
 use Benlumia007\Alembic\Routing\Entry\Locator;
 
 class Home {
 	public function __invoke() {
-		Engine::display( 'home', [], [
-			'entries' => $this->entries(),
-			'title'   => e( site_title() ),
-		] );
+		Benlumia007\Alembic\Engine::display( 'home', [], [ 'entries' => $this->entries() ] ); 
 	}
 
 	protected function entries() {
@@ -28,8 +23,6 @@ class Home {
 
 		$entries = new Entries( $locator, [ 'slug' => '_index' ] );
 
-		if ( $entries->all() ) {
-			return $entries;
-		}
+		return $entries;
 	}
 }

@@ -14,7 +14,7 @@
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Benlumia007\Alembic\Entry;
+namespace Benlumia007\Alembic\Routing\Entry;
 use Benlumia007\Alembic\Routing\Routes\Component;
 
 abstract class Type {

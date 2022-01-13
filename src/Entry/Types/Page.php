@@ -3,7 +3,6 @@
 namespace Benlumia007\Alembic\Entry\Types;
 
 use Benlumia007\Alembic\Entry\Controllers\Page as PageController;
-// use Benlumia007\Alembic\Routing\Routes\Component;
 use Benlumia007\Alembic\App;
 use Benlumia007\Alembic\Routing\Entry\Type;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Benlumia007\Alembic\ContentTypes\Controllers;
+namespace Benlumia007\Alembic\Entry\Controllers;
 
-use Benlumia007\Alembic\Entry\Entries;
-use Benlumia007\Alembic\Entry\Locator;
+use Benlumia007\Alembic\Routing\Entry\Entries;
+use Benlumia007\Alembic\Routing\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 
 class Home {

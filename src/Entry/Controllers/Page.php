@@ -2,9 +2,9 @@
 
 namespace Benlumia007\Alembic\Entry\Controller;
 
-use Benlumia007\Alembic\Entry\Entries;
-use Benlumia007\Alembic\Entry\Locator;
 use Benlumia007\Alembic\Engine;
+use Benlumia007\Alembic\Routing\Entry\Entries;
+use Benlumia007\Alembic\Routing\Entry\Locator;
 
 class Page {
 

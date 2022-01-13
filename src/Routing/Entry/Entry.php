@@ -1,6 +1,6 @@
 <?php
 
-namespace Benlumia007\Alembic\Entry;
+namespace Benlumia007\Alembic\Routing\Entry;
 use ParsedownExtra;
 use Benlumia007\Alembic\Tools\Markdown;
 

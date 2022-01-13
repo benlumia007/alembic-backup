@@ -10,7 +10,10 @@ class Error404 {
 	public function __invoke() {
 
 		// Loooks for 404.php under public/views
-		Engine::display( '404', [], [ 'entries' => $this->entries() ] );
+		Engine::display( '404', [], [ 
+			'title'   => $entry ? $entry->title() : 'Not Found',
+			'entries' => $this->entries() 
+		] );
 	}
 
 	protected function entries() {

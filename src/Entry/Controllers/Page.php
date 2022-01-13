@@ -44,25 +44,10 @@ class Page {
 
 	protected function entries() {
 
-		$entries = [];
+		// Looks for _index.md under user/content/{slug}/_index.md
+		$entries = new Entries( new Locator( $this->slug ), [ 'slug' => '_index'] );
 
-		// Because this is a page, let's assume the slug is a folder
-		// name and check for `index.php` first.
-		//
-		// @todo - strip everything to first dot for ordered pages.
-		$index_path = $this->path ? "{$this->path}/{$this->slug}" : $this->slug;
-
-		$locator = new Locator( $index_path );
-
-		$entries = new Entries( $locator, [ 'slug' => '_index' ] );
-
-		if ( ! $entries->all() ) {
-
-			$locator = new Locator( $this->path );
-
-			$entries = new Entries( $locator, [ 'slug' => $this->slug ] );
-		}
-
+		// Return $entries
 		return $entries;
 	}
 }

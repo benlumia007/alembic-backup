@@ -23,7 +23,7 @@ class Page {
 
 		$this->slug = urldecode( array_pop( $page ) );
 
-		$all = $entries->all();
+		$all = $this->entries()->all();
 		$entry = array_shift( $all );
 
 		if ( is_null( $entry ) ) {

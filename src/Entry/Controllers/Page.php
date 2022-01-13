@@ -15,20 +15,13 @@ class Page {
 
 	public function __invoke( array $params = [] ) {
 
-		$this->params = (array) $params;
+		$this->params = ( array ) $params;
 
-		$_path = $this->params['name'];
+		$_path = $this->params[ 'name' ];
 
 		$page = explode( '/', $_path );
+
 		$this->slug = urldecode( array_pop( $page ) );
-
-		if ( '_' === substr( $this->slug, 0, 1 ) ) {
-			$controller = new Error404();
-			$controller();
-			die();
-		}
-
-		$this->path = trim( str_replace( $this->slug, '', $_path ), '/' );
 
 		$entries = $this->entries();
 

@@ -16,13 +16,13 @@ use Benlumia007\Alembic\Routing\Entry\Locator;
 class Home {
 	public function __invoke() {
 
-		// This creates a new home.php under public/views/home.php
+		// Looks for home.php under public/views
 		Engine::display( 'home', [], [ 'entries' => $this->entries() ] ); 
 	}
 
 	protected function entries() {
 
-		// This creates a new _index.md under user/content/_index.md
+		// Looks for _index.md under user/content/_index.md
 		$entries = new Entries( new Locator(), [ 'slug' => '_index' ] );
 
 		// Return $entries

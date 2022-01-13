@@ -13,13 +13,9 @@ class Error404 {
 
 	protected $type;
 
-	protected $params = [];
-
-	public function __invoke( array $params = [] ) {
+	public function __invoke() {
 
 		http_response_code( 404 );
-
-		$this->params = (array) $params;
 
 		$entries = $this->entries();
 

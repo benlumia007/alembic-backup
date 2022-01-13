@@ -8,10 +8,14 @@ use Benlumia007\Alembic\Routing\Entry\Locator;
 
 class Error404 {
 	public function __invoke() {
+
+		// Loooks for 404.php under public/views
 		Engine::display( '404', [], ['entries' => $this->entries() ] );
 	}
 
 	protected function entries() {
-		return new Entries( new Locator( '_error' ), [ 'slug' => '404' ] );
+
+		// Looks for _index.md under user/content/_error/_index.md
+		return new Entries( new Locator( '_error' ), [ 'slug' => '_index' ] );
 	}
 }

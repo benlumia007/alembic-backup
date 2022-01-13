@@ -23,8 +23,6 @@ class Page {
 
 		$this->slug = urldecode( array_pop( $page ) );
 
-		$entries = $this->entries();
-
 		$all = $entries->all();
 		$entry = array_shift( $all );
 
@@ -38,16 +36,31 @@ class Page {
 			'title'   => $entry ? $entry->title() : 'Not Found',
 			'query'   => $entry ? $entry : false,
 			'page'    => 1,
-			'entries' => $entries
+			'entries' => $this->entries()
 		] );
 	}
 
 	protected function entries() {
 
-		// Looks for _index.md under user/content/{slug}/_index.md
-		$entries = new Entries( new Locator( $this->slug ), [ 'slug' => '_index'] );
+		$entries = [];
 
-		// Return $entries
+		// Because this is a page, let's assume the slug is a folder
+		// name and check for `index.php` first.
+		//
+		// @todo - strip everything to first dot for ordered pages.
+		$index_path = $this->path ? "{$this->path}/{$this->slug}" : $this->slug;
+
+		$locator = new Locator( $index_path );
+
+		$entries = new Entries( $locator, [ 'slug' => '_index' ] );
+
+		if ( ! $entries->all() ) {
+
+			$locator = new Locator( $this->path );
+
+			$entries = new Entries( $locator, [ 'slug' => $this->slug ] );
+		}
+
 		return $entries;
 	}
 }

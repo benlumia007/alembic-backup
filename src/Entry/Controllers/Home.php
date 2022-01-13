@@ -1,21 +1,22 @@
 <?php
+/**
+ * Home controller.
+ *
+ * @package   Alembic
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2019-2021. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ */
 
 namespace Benlumia007\Alembic\Entry\Controllers;
 
+use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\Routing\Entry\Entries;
 use Benlumia007\Alembic\Routing\Entry\Locator;
-use Benlumia007\Alembic\Engine;
 
 class Home {
-
-	protected $params;
-
-	public function __invoke( array $params = [] ) {
-
-		$this->params = $params;
-
+	public function __invoke() {
 		Engine::display( 'home', [], [
-			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries(),
 			'title'   => e( site_title() ),
 		] );
@@ -23,7 +24,6 @@ class Home {
 
 	protected function entries() {
 
-		// regular page - _index.md
 		$locator = new Locator();
 
 		$entries = new Entries( $locator, [ 'slug' => '_index' ] );

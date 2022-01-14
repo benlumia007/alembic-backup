@@ -9,6 +9,9 @@ use Benlumia007\Alembic\Routing\Entry\Locator;
 class Error404 {
 	public function __invoke() {
 
+		// Add response code 404, just in case
+		http_response_code( 404 );
+
 		// Loooks for 404.php under public/views
 		Engine::display( '404', [], [ 
 			'title'   => 'Not Found',

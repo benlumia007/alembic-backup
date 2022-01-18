@@ -41,7 +41,7 @@ class Post extends Type {
 
 	public function uri( $path = '' ) {
 
-		$uri = App::resolve( 'uri' ) . '/';
+		$uri = App::resolve( 'uri/relative' );
 
 		return $path ? "{$uri}/{$path}" : $uri;
 	}

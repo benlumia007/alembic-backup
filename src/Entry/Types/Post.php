@@ -19,6 +19,7 @@ use Benlumia007\Alembic\Entry\Controllers\Post as PostController;
 use Benlumia007\Alembic\Entry\Controllers\PostDayArchive;
 use Benlumia007\Alembic\Entry\Controllers\PostMonthArchive;
 use Benlumia007\Alembic\Entry\Controllers\PostYearArchive;
+use Benlumia007\Alembic\Routing\Entry\Type;
 use Benlumia007\Alembic\Routing\Routes\Component;
 use Benlumia007\Alembic\App;
 

@@ -6,7 +6,7 @@ use Benlumia007\Alembic\Tools\Markdown;
 
 use Michelf\SmartyPants;
 use Michelf\SmartyPantsTypographer;
-use Benlumia007\Alembic\Yaml\FrontMatter;
+use Benlumia007\Alembic\Tools\FrontMatter;
 use Benlumia007\Alembic\App;
 use Benlumia007\Alembic\ContentTypes;
 use DateTime;

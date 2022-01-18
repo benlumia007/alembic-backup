@@ -13,7 +13,7 @@
  * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
+namespace Benlumia007\Alembic\Entry\Types;
 
 use Benlumia007\Alembic\Entry\Controllers\Post as PostController;
 use Benlumia007\Alembic\Entry\Controllers\PostDayArchive;

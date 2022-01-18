@@ -1,6 +1,6 @@
 <?php
 
-namespace Benlumia007\Alembic\Yaml;
+namespace Benlumia007\Alembic\Tools;
 
 use Illuminate\Support\Arr;
 

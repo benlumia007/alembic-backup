@@ -1,10 +1,10 @@
 <?php
 
-namespace Benlumia007\Alembic\ContentTypes\Controllers;
+namespace Benlumia007\Alembic\Entry\Controllers;
 
 use Benlumia007\Alembic\App;
-use Benlumia007\Alembic\ContentTypes\Entry\Entries;
-use Benlumia007\Alembic\ContentTypes\Entry\Locator;
+use Benlumia007\Alembic\Routing\Entry\Entries;
+use Benlumia007\Alembic\Routing\Entry\Locator;
 use Benlumia007\Alembic\Engine;
 use Benlumia007\Alembic\ContentTypes;
 

@@ -15,10 +15,10 @@
  */
 namespace Benlumia007\Alembic\ContentTypes\Entry\Types;
 
-use Benlumia007\Alembic\ContentTypes\Controllers\Post as PostController;
-use Benlumia007\Alembic\ContentTypes\Controllers\PostDayArchive;
-use Benlumia007\Alembic\ContentTypes\Controllers\PostMonthArchive;
-use Benlumia007\Alembic\ContentTypes\Controllers\PostYearArchive;
+use Benlumia007\Alembic\Entry\Controllers\Post as PostController;
+use Benlumia007\Alembic\Entry\Controllers\PostDayArchive;
+use Benlumia007\Alembic\Entry\Controllers\PostMonthArchive;
+use Benlumia007\Alembic\Entry\Controllers\PostYearArchive;
 use Benlumia007\Alembic\Routing\Routes\Component;
 use Benlumia007\Alembic\App;
 

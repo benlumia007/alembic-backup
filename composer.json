@@ -23,8 +23,7 @@
             "src/Core/functions-core.php",
             "src/Helpers/functions-helpers.php",
             "src/Theme/Menu/functions-menu.php",
-            "src/Theme/Site/functions-site.php",
-            "src/framework.php"
+            "src/Theme/Site/functions-site.php"
         ]
     },
 	"require": {

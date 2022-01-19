@@ -66,8 +66,6 @@ function widow( $text ) {
 }
 
 function request() {
-	//return str_replace( '/justin/', '', $_SERVER['REQUEST_URI'] );
-
 	$script_name = $_SERVER['SCRIPT_NAME'];
 	$request_uri = $_SERVER['REQUEST_URI'];
 

@@ -1,8 +1,9 @@
 <?php
 
 namespace Benlumia007\Alembic\Tools;
+use ParsedownExtra;
 
-class Markdown extends \ParsedownExtra {
+class Markdown extends ParsedownExtra {
 
 	// Matches Markdown image definition
 	private $MarkdownImageRegex = "~^!\[.*?\]\(.*?\)~";

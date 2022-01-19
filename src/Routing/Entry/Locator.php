@@ -2,7 +2,7 @@
 
 namespace Benlumia007\Alembic\Routing\Entry;
 use Benlumia007\Alembic\App;
-use Benlumia007\Alembic\Yaml\FrontMatter;
+use Benlumia007\Alembic\Tools\FrontMatter;
 
 class Locator {
 

@@ -15,6 +15,8 @@
  */
 $alembic = new Benlumia007\Alembic\Core\Framework();
 
+$alembic->boot();
+
 /**
  * Add default content types.
  */

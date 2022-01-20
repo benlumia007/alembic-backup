@@ -17,7 +17,7 @@ class Portfolio extends Type {
 
 	public function path() {
 
-		return '_portfolio';
+		return '_portfolios';
 	}
 
 	public function routes() {

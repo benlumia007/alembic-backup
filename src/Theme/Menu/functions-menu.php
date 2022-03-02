@@ -12,8 +12,8 @@ function primary_menu() {
 }
 
 function social_menu() {
-	$data = Benlumia007\Alembic\Theme\Yaml\Component::get_instance()->get_data();
-	foreach ($data['social'] as $name => $title ) { ?>
-		<li class="menu-item"><a href="<?= e( $title['url'] ); ?>" target="_blank"><svg><?php include( public_path() . e( $title['svg'] ) ); ?></svg></a></li>
+	$data = Benlumia007\Alembic\App::resolve( 'socialMenu' );
+	foreach ($data as $social ) { ?>
+		<li class="menu-item"><a href="<?= e( $social['url'] ); ?>" target="_blank"><svg><?php include( public_path() . e( $social['svg'] ) ); ?></svg></a></li>
 	<?php }
 }

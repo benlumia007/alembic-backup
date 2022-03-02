@@ -1,13 +1,11 @@
 <?php
 
 function site_title() {
-    $data = Benlumia007\Alembic\Theme\Yaml\Component::get_instance()->get_data();
-	$title = $data['title'];
+	$title = Benlumia007\Alembic\App::resolve( 'siteTitle' );
 	return strip_tags( $title );
 }
 
 function site_tagline() {
-	$data = Benlumia007\Alembic\Theme\Yaml\Component::get_instance()->get_data();
-	$title = $data['tagline'];
+	$title = Benlumia007\Alembic\App::resolve( 'siteDescription' );
 	return strip_tags( $title );
 }

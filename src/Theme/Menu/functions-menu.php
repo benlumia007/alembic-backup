@@ -2,8 +2,12 @@
 
 function primary_menu() {
 	$data = Benlumia007\Alembic\Theme\Yaml\Component::get_instance()->get_data();
+
+	// Append the requested resource location to the URL
+	$path = $_SERVER['REQUEST_URI'];
+	
 	foreach ($data['primary'] as $name => $title ) { ?>
-		<li class="menu-item"><a href="<?= e( uri( $title['url'] ) ) ?>"><?= e( $title['title'] ); ?></a></li>
+		<li class="menu-item"><a <?= $path === $title['url'] ? 'class="active"' : ''?> href="<?= e( uri( $title['url'] ) ) ?>"><?= e( $title['title'] ); ?></a></li>
 	<?php }
 }
 

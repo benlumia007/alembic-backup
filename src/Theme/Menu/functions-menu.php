@@ -1,7 +1,7 @@
 <?php
 
 function primary_menu() {
-	$data = Benlumia007\Alembic\App::resolve( 'primaryMenu' );
+	$data = config( 'app', 'primaryMenu');
 
 	// Append the requested resource location to the URL
 	$path = $_SERVER['REQUEST_URI'];

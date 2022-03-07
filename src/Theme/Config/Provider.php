@@ -33,7 +33,5 @@ class Provider extends ServiceProvider {
 	 */
 	public function register() {
 
-        // Add proxy
-        $this->app->proxy( Yaml::class, 'Benlumia007\Alembic\Yaml' );
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 function app( $abstract = '', $params = [] ) {
-	return App::resolve( $abstract ?: 'app', $params );
+	return Benlumia007\Alembic\App::resolve( $abstract ?: 'app', $params );
 }
 
 function config( $name, $key = '' ) {

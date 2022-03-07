@@ -14,6 +14,8 @@
  */
 
 namespace Benlumia007\Alembic\Theme\Config;
+use Benlumia007\Alembic\Theme\Config\Component;
+use Benlumia007\Alembic\Tools\Collection;
 use Benlumia007\Alembic\Tools\ServiceProvider;
 
 /**
@@ -32,6 +34,17 @@ class Provider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
+		$this->app->instance( 'config', new Collection() );
+
+		$files = glob( "{$this->app->path}/config/*.php" );
+
+		foreach ($files as $name => $value) {
+			$config = include( $file );
+
+			if ( is_array( $config ) ) {
+				$this->app->config->add( basename( $file, '.php' ), new Component( $config ) );
+			}
+		}
 
 	}
 }

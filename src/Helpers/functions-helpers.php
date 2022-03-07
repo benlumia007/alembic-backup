@@ -1,4 +1,17 @@
 <?php
+function app( $abstract = '', $params = [] ) {
+	return App::resolve( $abstract ?: 'app', $params );
+}
+
+function config( $name, $key = '' ) {
+	$config = app( 'config' )->get( $name );
+
+	if ( $key ) {
+		return $config[ $key ] ?? null;
+	}
+
+	return $config;
+}
 
 function path( $path = '' ) {
 

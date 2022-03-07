@@ -82,7 +82,10 @@ class Framework extends Container implements Application, Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function __construct() {
+	public function __construct( $path ) 
+	{
+		$this->instance( 'path', $path );
+	
 		$this->registerDefaultBindings();
 		$this->registerDefaultProxies();
 		$this->registerDefaultProviders();

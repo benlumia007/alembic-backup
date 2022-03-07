@@ -6,6 +6,6 @@ function site_title() {
 }
 
 function site_tagline() {
-	$title = Benlumia007\Alembic\App::resolve( 'siteDescription' );
+	$title = config( 'app', 'tagline' );
 	return strip_tags( $title );
 }

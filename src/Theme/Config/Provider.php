@@ -13,7 +13,7 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace Benlumia007\Alembic\Theme\Yaml;
+namespace Benlumia007\Alembic\Theme\Config;
 use Benlumia007\Alembic\Tools\ServiceProvider;
 
 /**

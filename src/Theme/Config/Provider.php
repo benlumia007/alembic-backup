@@ -15,7 +15,7 @@
 
 namespace Benlumia007\Alembic\Theme\Yaml;
 use Benlumia007\Alembic\Tools\ServiceProvider;
-use Symfony\Component\Yaml\Yaml;
+
 /**
  * View provider class.
  *

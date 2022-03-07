@@ -1,7 +1,7 @@
 <?php
 
 function site_title() {
-	$title = Benlumia007\Alembic\App::resolve( 'siteTitle' );
+	$title = config( 'app', 'title' );
 	return strip_tags( $title );
 }
 

@@ -38,7 +38,7 @@ class Provider extends ServiceProvider {
 
 		$files = glob( "{$this->app->path}/config/*.php" );
 
-		foreach ($files as $name => $value) {
+		foreach ($files as $file ) {
 			$config = include( $file );
 
 			if ( is_array( $config ) ) {

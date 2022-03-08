@@ -1,7 +1,5 @@
 <?php
 
-namespace Benlumia007\Alembic\Proxies\App;
-
 function cache_get_add( string $name, string $type = 'collection' ) {
 	$cache = cache();
 
@@ -17,7 +15,7 @@ function cache_get_add( string $name, string $type = 'collection' ) {
 }
 
 function cache() {
-	return App::resolve( 'cache' );
+	return Benlumia007\Alembic\Proxies\App::resolve( 'cache' );
 }
 
 function cache_get( $name, $path = '' ) {

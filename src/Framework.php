@@ -137,7 +137,6 @@ class Framework extends Container implements Application, Bootable {
 			$this->provider( $provider );
 		}, [
 			CacheProvider::class,
-			ConfigProvider::class,
 			ContentTypesProvider::class,
 			HttpProvider::class,
 			RoutesProvider::class,

@@ -19,6 +19,7 @@ use Benlumia007\Alembic\Tools\Config;
 
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
 use Benlumia007\Alembic\Core\App as AppProvider;
+use Benlumia007\Alembic\Core\Content as ContentProvider;
 use Benlumia007\Alembic\Entry\Provider as ContentTypesProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
 use Benlumia007\Alembic\Routing\Routes\Provider as RoutesProvider;

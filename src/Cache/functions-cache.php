@@ -1,5 +1,19 @@
 <?php
 
+function cache_get_add( string $name, string $type = 'collection' ) {
+	$cache = cache();
+
+	if ( $cache->has( $name ) ) {
+		return $cache->get( $name )->get();
+	}
+
+	cache_add( $name, $type );
+
+	$_cache = $cache->get( $name );
+
+	return $_cache->get();
+}
+
 function cache( $name, $path = '' ) {
 
 	$cache = Benlumia007\Alembic\App::resolve( 'cache' );

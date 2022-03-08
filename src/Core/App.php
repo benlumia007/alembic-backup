@@ -10,7 +10,7 @@ class App extends ServiceProvider {
         $this->app->instance( 'uri', $app[ 'uri' ] );
         $this->app->instance( 'uri/relative', $app[ 'uri' ], PHP_URL_PATH );
 
-        $this->app->instance( 'cache/meta', [ 'date', 'category', 'slug' ] );
+        $this->app->instance( 'cache', new Benlumia007\Alembic\Tools\Collection() );
 
         $this->app->singleton( 'mix', function( $app ) {
 

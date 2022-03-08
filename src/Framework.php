@@ -14,13 +14,15 @@ use Benlumia007\Alembic\Contracts\Foundation\Application;
 use Benlumia007\Alembic\Contracts\Bootable;
 use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
+use Benlumia007\Alembic\Tools\Collection;
 
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
 use Benlumia007\Alembic\Entry\Provider as ContentTypesProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
 use Benlumia007\Alembic\Routing\Routes\Provider as RoutesProvider;
 use Benlumia007\Alembic\Template\View\Provider as ViewProvider;
-use Benlumia007\Alembic\Theme\Config\Provider as ConfigProvider;
+use Benlumia007\Alembic\Theme\Config\Component as Config;
+
 /**
  * Application class.
  *
@@ -119,6 +121,18 @@ class Framework extends Container implements Application, Bootable {
 		$this->instance( 'version', static::VERSION );
 
 		$this->instance( 'path/content', 'user/content');
+
+		$this->instance( 'config', new Collection() );
+
+		$files = glob( "{$this->app->path}/config/*.php" );
+
+		foreach ( $files as $file ) {
+			$config = include( $file );
+
+			if ( is_array( $confg ) ) {
+				$this->app->config->add( basename( $file, '.php' ), new Config( $config ) );
+			}
+		}
 	}
 
 	/**

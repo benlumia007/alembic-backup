@@ -18,6 +18,7 @@ use Benlumia007\Alembic\Tools\Collection;
 use Benlumia007\Alembic\Tools\Config;
 
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
+use Benlumia007\Alembic\Core\App as AppProvider;
 use Benlumia007\Alembic\Entry\Provider as ContentTypesProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
 use Benlumia007\Alembic\Routing\Routes\Provider as RoutesProvider;
@@ -150,6 +151,7 @@ class Framework extends Container implements Application, Bootable {
 		array_map( function( $provider ) {
 			$this->provider( $provider );
 		}, [
+			AppProvider::class,
 			CacheProvider::class,
 			ContentTypesProvider::class,
 			HttpProvider::class,

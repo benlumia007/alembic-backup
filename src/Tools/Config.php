@@ -1,11 +1,22 @@
 <?php
+/**
+ * Config
+ *
+ * @package   Alembic
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright 2021. Benjamin Lu
+ * @link      https://github.com/benlumia007/benjlu
+ * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
-namespace Benlumia007\Alembic\Tools;
-
+/**
+ * Define namespace
+ */
+namespace Benlumia007\Alembic\Theme\Config;
 use Benlumia007\Alembic\Tools\Collection;
 use Symfony\Component\Yaml\Yaml;
 
-class Config extends Collection {
+class Component extends Collection {
     public function parseYamlFile( $filename ) {
         $config = Yaml::parseFile( $filename );
 
@@ -13,7 +24,7 @@ class Config extends Collection {
             return;
         }
 
-        foreach ( $config as $key => $value ) {
+        foreach ($config as $name => $value ) {
             $this->add( $name, $value );
         }
     }

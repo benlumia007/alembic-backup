@@ -15,13 +15,13 @@ use Benlumia007\Alembic\Contracts\Bootable;
 use Benlumia007\Alembic\Proxies\Proxy;
 use Benlumia007\Alembic\Proxies\App;
 use Benlumia007\Alembic\Tools\Collection;
+use Benlumia007\Alembic\Tools\Config;
 
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
 use Benlumia007\Alembic\Entry\Provider as ContentTypesProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
 use Benlumia007\Alembic\Routing\Routes\Provider as RoutesProvider;
 use Benlumia007\Alembic\Template\View\Provider as ViewProvider;
-use Benlumia007\Alembic\Theme\Config\Component as Config;
 
 /**
  * Application class.

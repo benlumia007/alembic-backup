@@ -12,11 +12,11 @@
 /**
  * Define namespace
  */
-namespace Benlumia007\Alembic\Theme\Config;
+namespace Benlumia007\Alembic\Tools;
 use Benlumia007\Alembic\Tools\Collection;
 use Symfony\Component\Yaml\Yaml;
 
-class Component extends Collection {
+class Config extends Collection {
     public function parseYamlFile( $filename ) {
         $config = Yaml::parseFile( $filename );
 

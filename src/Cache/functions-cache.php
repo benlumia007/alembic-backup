@@ -39,11 +39,15 @@ function cache_get( $name, $path = '' ) {
 	return cache( $name, $path )->get()->all();
 }
 
-function cache_set( $name, $path = '', $data = [] ) {
+function cache_set( string $name, $data, string $type = 'collect' ) {
+	$cache = cache();
 
-	cache( $name, $path )->set( $data );
+	if ( ! $cache->has( $name ) ) {
+		cache_add( $name, $type );
+	}
+
+	$cache->get( $name )->set( $data );
 }
-
 function cache_delete( $name, $path = '' ) {
 
 	cache( $name, $path )->delete();

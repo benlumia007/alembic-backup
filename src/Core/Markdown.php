@@ -9,7 +9,7 @@
  * @license   https://opensource.org/licenses/MIT
  */
 
-namespace Benlumia007\Alembic\Core\Providers;
+namespace Benlumia007\Alembic\Core;
 
 use Benlumia007\Alembic\Contracts\Markdown\Parser as ParserContract;
 

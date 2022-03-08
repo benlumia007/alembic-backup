@@ -157,7 +157,6 @@ class Framework extends Container implements Application, Bootable {
 			ContentTypesProvider::class,
 			HttpProvider::class,
 			RoutesProvider::class,
-			ViewProvider::class
 		] );
 	}
 

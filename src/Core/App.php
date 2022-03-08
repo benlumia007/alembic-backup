@@ -4,6 +4,9 @@ namespace Benlumia007\Alembic\Core;
 use Benlumia007\Alembic\Tools\Collection;
 use Benlumia007\Alembic\Tools\ServiceProvider;
 
+use Benlumia007\Alembic\Template\Engine;
+use Benlumia007\Alembic\Template\View;
+
 class App extends ServiceProvider {
     public function register() {
         $app = $this->app->config->get( 'app' );
@@ -19,5 +22,9 @@ class App extends ServiceProvider {
         
             return file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null;
         } );
+
+		// Add template engine.
+        $this->app->bind( View::class );
+		$this->app->singleton( Engine::class );
     }
 }

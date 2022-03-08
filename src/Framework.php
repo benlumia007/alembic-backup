@@ -129,7 +129,7 @@ class Framework extends Container implements Application, Bootable {
 		foreach ( $files as $file ) {
 			$config = include( $file );
 
-			if ( is_array( $confg ) ) {
+			if ( is_array( $config ) ) {
 				$this->app->config->add( basename( $file, '.php' ), new Config( $config ) );
 			}
 		}

@@ -9,9 +9,9 @@
  * @license   https://opensource.org/licenses/MIT
  */
 
-namespace Benlumia007\Alembic\Core\Providers;
+namespace Benlumia007\Alembic\Core;
 
-use Benlumia007\Alembic\Core\ServiceProvider;
+use Benlumia007\Alembic\Tools\ServiceProvider;
 use Benlumia007\Alembic\Controllers;
 use Benlumia007\Alembic\Routing\Routes;
 use Benlumia007\Alembic\Routing\Router;

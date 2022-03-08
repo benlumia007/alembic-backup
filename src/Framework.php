@@ -118,7 +118,7 @@ class Framework extends Container implements Application, Bootable {
 		// Add the version for the framework.
 		$this->instance( 'version', static::VERSION );
 
-		$this->instance( 'path/content', 'user/content')
+		$this->instance( 'path/content', 'user/content');
 	}
 
 	/**

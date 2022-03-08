@@ -124,6 +124,7 @@ class Framework extends Container implements Application, Bootable {
 
 		$this->instance( 'path/content', "{$this->path}/user/content" );
 		$this->instance( 'path/public', "{$this->path}/public" );
+		$this->instance( 'path/cache', "{$this->path}/storage/cache" );
 
 		$this->instance( 'config', new Collection() );
 

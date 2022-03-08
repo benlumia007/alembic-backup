@@ -122,7 +122,8 @@ class Framework extends Container implements Application, Bootable {
 		// Add the version for the framework.
 		$this->instance( 'version', static::VERSION );
 
-		$this->instance( 'path/content', 'user/content');
+		$this->instance( 'path/content', "{$this->path}/user/content" );
+		$this->instance( 'path/public', "{$this->path}/public" );
 
 		$this->instance( 'config', new Collection() );
 
@@ -153,10 +154,10 @@ class Framework extends Container implements Application, Bootable {
 			$this->provider( $provider );
 		}, [
 			AppProvider::class,
+			RoutesProvider::class,
 			CacheProvider::class,
 			ContentTypesProvider::class,
 			HttpProvider::class,
-			RoutesProvider::class,
 		] );
 	}
 

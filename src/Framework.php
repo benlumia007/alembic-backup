@@ -20,7 +20,7 @@ use Benlumia007\Alembic\Tools\Config;
 use Benlumia007\Alembic\Cache\Provider as CacheProvider;
 use Benlumia007\Alembic\Core\App as AppProvider;
 use Benlumia007\Alembic\Core\Content as ContentTypesProvider;
-// use Benlumia007\Alembic\Entry\Provider as ContentTypesProvider;
+use Benlumia007\Alembic\Core\Markdown as MarkdownProvider;
 use Benlumia007\Alembic\Routing\Http\Provider as HttpProvider;
 use Benlumia007\Alembic\Core\Route as RoutesProvider;
 use Benlumia007\Alembic\Template\View\Provider as ViewProvider;
@@ -154,9 +154,10 @@ class Framework extends Container implements Application, Bootable {
 			$this->provider( $provider );
 		}, [
 			AppProvider::class,
+			ContentTypesProvider::class,
+			MarkdownProvider::class,
 			RoutesProvider::class,
 			CacheProvider::class,
-			ContentTypesProvider::class,
 			HttpProvider::class,
 		] );
 	}

@@ -9,10 +9,10 @@
  * @license   https://opensource.org/licenses/MIT
  */
 
-namespace Blush\Template;
+namespace Benlumia007\Alembic\Template;
 
-use Blush\Proxies\App;
-use Blush\Tools\Collection;
+use Benlumia007\Alembic\Proxies\App;
+use Benlumia007\Alembic\Tools\Collection;
 
 class View {
 

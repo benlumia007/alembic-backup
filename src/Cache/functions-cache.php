@@ -22,7 +22,7 @@ function cache_add( string $name, string $type = 'collection' ) {
 	$cache = cache();
 
 	$map = [
-		'collection' => Cache\Collection::class,
+		'collection' => Benlumia007\Alembic\Cache\Collection::class,
 		'html'       => Cache\Html::class,
 		'json'       => Cache\Json::class,
 		'rapid'      => Cache\Rapid::class

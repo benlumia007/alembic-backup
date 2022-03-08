@@ -13,7 +13,7 @@ namespace Benlumia007\Alembic\Core;
 
 use Benlumia007\Alembic\Contracts\Markdown\Parser as ParserContract;
 
-use Benlumia007\Alembic\Core\ServiceProvider;
+use Benlumia007\Alembic\Tools\ServiceProvider;
 use Benlumia007\Alembic\Markdown\Parser;
 use Benlumia007\Alembic\Markdown\ImageRenderer;
 use Benlumia007\Alembic\Markdown\LinkRenderer;

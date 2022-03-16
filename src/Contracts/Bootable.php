@@ -14,7 +14,7 @@
  * @license   https://opensource.org/licenses/MIT
  */
 
-namespace Blush\Contracts;
+namespace Benlumia007\Alembic\Contracts;
 
 interface Bootable
 {

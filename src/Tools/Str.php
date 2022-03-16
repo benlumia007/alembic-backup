@@ -1,0 +1,188 @@
+<?php
+/**
+ * String class.
+ *
+ * This file houses a collection of static methods for working with strings.
+ *
+ * @package   Alembic
+ * @author    Benjamin Lu <benlumia007k@gmail.com>
+ * @copyright Copyright (c) 2019 - 2022, Benjamin Lu
+ * @link      https://github.com/benlumia007/alembic
+ * @license   https://opensource.org/licenses/MIT
+ */
+
+namespace Blush\Tools;
+
+class Str
+{
+	/**
+	 * Returns part of a string after the last occurrence.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function afterLast( string $str, string $search ) : string {
+		if ( '' === $search ) {
+			return $str;
+		}
+
+		$pos = strrpos( $str, $search );
+
+		if ( false === $pos ) {
+			return $str;
+		}
+
+		return substr( $str, $pos + strlen( $search ) );
+	}
+
+	/**
+	 * Trims slashes and appends a path to a path.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function appendPath( string $path, string $append = '' ) : string {
+		$path   = rtrim( $path, '/\\' );
+		$append = ltrim( $append, '/\\' );
+		return $append ? "{$path}/{$append}" : $path;
+	}
+
+	/**
+	 * Trims slashes and appends a path to a URI.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function appendUri( string $uri, string $append = '' ) : string {
+		$uri    = rtrim( $uri, '/\\' );
+		$append = ltrim( $append, '/\\' );
+		return $append ? "{$uri}/{$append}" : $uri;
+	}
+
+	/**
+	 * Returns part of a string before the last occurrence.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function beforeLast( string $str, string $search ) : string {
+		if ( '' === $search ) {
+			return $str;
+		}
+
+		$pos = mb_strrpos( $str, $search );
+
+		if ( false === $pos ) {
+			return $str;
+		}
+
+		return static::substr( $str, 0, $pos );
+	}
+
+	/**
+	 * Checks if a string contains another string.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function contains( string $haystack, string $needle ) : bool {
+		// PHP 8.
+		if ( function_exists( 'str_contains' ) ) {
+			return str_contains( $haystack, $needle );
+		}
+
+		return false !== mb_strpos( $haystack, $needle );
+	}
+
+	/**
+	 * Normalizes the filesystem path to use `/` instead of `\` for the
+	 * directory separator.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function normalizePath( string $path ) : string {
+		$path = str_replace( '\\', '/', $path );
+		$path = preg_replace( '|(?<=.)/+|', '/', $path );
+
+		if ( ':' === static::substr( $path, 1, 1 ) ) {
+			$path = ucfirst( $path );
+		}
+
+		return $path;
+	}
+
+	/**
+	 * Replaces the last occurrence of a string.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function replaceLast( string $search, string $replace, string $str ) : string {
+		if ( '' === $search ) {
+			return $str;
+		}
+
+		$pos = strpos( $str, $search );
+
+		if ( false !== $pos ) {
+			return substr_replace( $str, $replace, $pos, strlen( $search ) );
+		}
+
+		return $str;
+	}
+
+	/**
+	 * Adds a slash after a string.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function slashAfter( string $str ) : string {
+		return rtrim( $str, '/\\' ) . '/';
+	}
+
+	/**
+	 * Adds a slash before a string.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function slashBefore( string $str ) : string {
+		return '/' . ltrim( $str, '/\\' );
+	}
+
+	/**
+	 * Trims slashes from both sides of string.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function slashTrim( string $str ) : string {
+		return trim( $str, '/\\' );
+	}
+
+	/**
+	 * Checks if a string starts with another string.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function startsWith( string $str, string $starts ) : bool {
+		return substr( $str, 0, strlen( $starts ) ) === $starts;
+	}
+
+	/**
+	 * Returns part of a string based on the start and length parameters.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function substr( string $str, int $start, ?int $length = null ) : string {
+		return mb_substr( $str, $start, $length, 'UTF-8' );
+	}
+
+	/**
+	 * Returns an excerpt of a string by limiting its number of words.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function words( string $str, int $limit = 50, string $more = '&hellip;' ) : string {
+		$limit = $limit > 1 ? $limit - 1 : $limit;
+		preg_match( '/^\s*+(?:\S++\s*+){1,' . $limit . '}/u', $str, $matches );
+
+	        if ( ! isset( $matches[0] ) ) {
+	    	    return $str;
+	        }
+
+		return trim( $matches[0] ) . $more;
+	}
+}

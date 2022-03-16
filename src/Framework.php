@@ -18,6 +18,7 @@ namespace Benlumia007\Alembic;
 use Benlumia007\Alembic\Container\Container;
 use Benlumia007\Alembic\Contracts\Core\Application as ApplicationContract;
 use Benlumia007\Alembic\Contracts\Bootable;
+use Benlumia007\Alembic\Proxies\App;
 use Benlumia007\Alembic\Tools\Str;
 
 /**
@@ -101,7 +102,7 @@ class Framework extends Container implements ApplicationContract, Bootable
 	 * @since 1.0.0
 	 */
 	protected function registerDefaultProxies(): void {
-		$this->proxy( Benlumia007\Alembic\Proxies\App::class, 'Benlumia007\Alembic\App' );
+		$this->proxy( App::class, 'Benlumia007\Alembic\App' );
 	}
 
 	/**

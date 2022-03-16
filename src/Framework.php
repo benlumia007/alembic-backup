@@ -99,7 +99,7 @@ class Framework extends Container implements ApplicationContract, Bootable
 	 * @since 1.0.0
 	 */
 	protected function registerDefaultProxies(): void {
-
+		$this->proxy( Proxies\App::class, 'Benlumia007\Alembic\App' );
 	}
 
 	/**

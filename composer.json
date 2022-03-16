@@ -1,0 +1,8 @@
+{
+	"name": "benlumia007/alembic",
+	"autoload": {
+		"psr-4": {
+			"Benlumia007\\Alembic\\": "src/"
+		}
+	}
+}

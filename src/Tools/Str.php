@@ -11,7 +11,7 @@
  * @license   https://opensource.org/licenses/MIT
  */
 
-namespace Blush\Tools;
+namespace Benlumia007\Alembic\Tools;
 
 class Str
 {

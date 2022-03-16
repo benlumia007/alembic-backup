@@ -7,7 +7,7 @@
  * escaped prior to being output.
  *
  * @package   Alembic
- * @author    Benjamin Lu <justintadlock@gmail.com>
+ * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright Copyright (c) 2019 - 2022, Benjamin Lu
  * @link      https://github.com/benlumia007/alembic
  * @license   https://opensource.org/licenses/MIT

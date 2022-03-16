@@ -18,6 +18,7 @@ namespace Benlumia007\Alembic;
 use Benlumia007\Alembic\Container\Container;
 use Benlumia007\Alembic\Contracts\Core\Application as ApplicationContract;
 use Benlumia007\Alembic\Contracts\Bootable;
+use Benlumia007\Alembic\Tools\Str;
 
 /**
  * Application class.
@@ -54,7 +55,8 @@ class Framework extends Container implements ApplicationContract, Bootable
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct() {
+	public function __construct( string $path ) {
+		$this->instance( 'path', Str::normalizePath( $path ) );
 		$this->registerDefaultBindings();
 		$this->registerDefaultProviders();
 		$this->registerDefaultProxies();

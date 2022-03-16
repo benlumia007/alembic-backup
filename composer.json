@@ -1,35 +1,8 @@
 {
-    "name": "benlumia007/alembic",
-    "description": "A core that helps you build amazing custom themes",
-    "keywords": [
-        "cms"
-    ],
-    "homepage": "https://github.com/benlumia007/alembic",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Benjamin Lu",
-            "email": "benlumia007@gmail.com",
-            "homepage": "https://benjlu.com",
-            "role": "Developer"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-          "Benlumia007\\Alembic\\": "src/"
-		},
-        "files": [
-            "src/Cache/functions-cache.php",
-            "src/Core/functions-core.php",
-            "src/Helpers/functions-helpers.php",
-            "src/Theme/Menu/functions-menu.php",
-            "src/Theme/Site/functions-site.php"
-        ]
-    },
-	"require": {
-		"symfony/yaml": "^3.0",
-		"erusev/parsedown-extra": "^0.8.1",
-		"michelf/php-smartypants": "^1.8",
-		"suin/php-rss-writer": "^1.6"
+	"name": "benlumia007/alembic",
+	"autoload" : {
+		"psr-4" : {
+			"Benlumia007\\Alembic\\" : "src/"
+		}
 	}
 }

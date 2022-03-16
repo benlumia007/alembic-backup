@@ -11,8 +11,7 @@
  * @license   https://opensource.org/licenses/MIT
  */
 
-namespace Benlumia007\Alembic\Core\Proxies;
-use Benlumia007\Alembic\Core\Proxy;
+namespace Benlumia007\Alembic\Proxies;
 
 class App extends Proxy
 {
